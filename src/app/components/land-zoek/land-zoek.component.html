@@ -1,0 +1,13 @@
+<div id="search-component">
+    <h4>Landen zoeken</h4>
+
+    <input #zoekBox id="zoek-box" (keyup)="zoek(zoekBox.value)" />
+
+    <ul>
+        <li *ngFor="let l of landen$ | async">
+            <a routerLink="/detail/{{l.id}}">
+                {{l.name}}
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,13 @@
+<div *ngIf="land">
+    <h2>{{land.name}} details!</h2>
+    <div>
+        <label>id: </label>{{land.id}}
+    </div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="land.name" placeholder="name"
+            [style.backgroundColor]="land.name ===''?'red':'yellow'" />
+    </div>
+    <button class="btn" (click)="goBack()">go back</button>
+    <button class='btn btn-primary' (click)='save()'>Save</button>
+</div>
